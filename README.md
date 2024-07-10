@@ -39,7 +39,7 @@ note-taker/
 
 1. Clone the repository to your local machine:
     ```
-    git clone https://github.com/ElijahWard4/note-taker.git
+    git clone https://github.com/ElijahWard4/Note-Taker.git
     ```
 
 2. Navigate to the project directory:
