@@ -24,3 +24,11 @@ app.get('/api/notes', (req, res) => {
         res.json(JSON.parse(data));
     });
 });
+
+app.post('/api/notes', (req, res) => {
+    const newNote = {
+        id: Date.now(), // Generate a unique ID based on the current timestamp
+        title: req.body.title,
+        text: req.body.text
+    };
+});
