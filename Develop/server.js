@@ -50,3 +50,17 @@ app.post('/api/notes', (req, res) => {
         });
     });
 });
+
+app.delete('/api/notes/:id', (req, res) => {
+    const noteId = parseInt(req.params.id, 10); // Convert id to a number
+
+    fs.readFile(dbPath, 'utf8', (err, data) => {
+        if (err) {
+            console.error(err);
+            return res.status(500).json({ error: 'Failed to read notes' });
+        }
+
+        const notes = JSON.parse(data);
+        const newDb = notes.filter(note => note.id !== noteId);
+    });
+});
