@@ -1,4 +1,7 @@
 Note Taker Application
+![Note-Taker-Gif](https://github.com/ElijahWard4/Note-Taker/assets/97565223/30d6fcc0-02af-4165-8535-d63c482a61a5)
+
+
 # Description
 
 This Note Taker application allows users to write, save, and delete notes. The application is built with a back-end using Express.js to handle data storage and retrieval, and a front-end using HTML, CSS, and JavaScript to provide a user-friendly interface.
