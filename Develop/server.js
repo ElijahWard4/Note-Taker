@@ -31,4 +31,14 @@ app.post('/api/notes', (req, res) => {
         title: req.body.title,
         text: req.body.text
     };
-});
+
+    fs.readFile(dbPath, 'utf8', (err, data) => {
+        if (err) {
+            console.error(err);
+            return res.status(500).json({ error: 'Failed to read notes' });
+        }
+
+        const notes = JSON.parse(data);
+        notes.push(newNote);
+    });
+})
