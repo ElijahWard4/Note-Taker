@@ -1,5 +1,3 @@
-//Todo: describe what this index.js file does
-//This file is responsible for handling the front end logic of the note taking application. It is responsible for rendering the notes, saving the notes, deleting the notes, and creating new notes. It also handles the logic for the buttons on the page.
 let noteForm;
 let noteTitle;
 let noteText;
