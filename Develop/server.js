@@ -40,5 +40,13 @@ app.post('/api/notes', (req, res) => {
 
         const notes = JSON.parse(data);
         notes.push(newNote);
+
+        fs.writeFile(dbPath, JSON.stringify(notes), (writeErr) => {
+            if (writeErr) {
+                console.error(writeErr);
+                return res.status(500).json({ error: 'Failed to write note' });
+            }
+            res.json(newNote);
+        });
     });
-})
+});
