@@ -62,5 +62,13 @@ app.delete('/api/notes/:id', (req, res) => {
 
         const notes = JSON.parse(data);
         const newDb = notes.filter(note => note.id !== noteId);
+
+        fs.writeFile(dbPath, JSON.stringify(newDb), (writeErr) => {
+            if (writeErr) {
+                console.error(writeErr);
+                return res.status(500).json({ error: 'Failed to write notes' });
+            }
+            res.json({ success: true });
+        });
     });
 });
