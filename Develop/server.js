@@ -14,3 +14,13 @@ app.use(express.static('public'));
 app.get('/notes', (req, res) =>
     res.sendFile(path.join(__dirname, 'public', 'notes.html'))
 );
+
+app.get('/api/notes', (req, res) => {
+    fs.readFile(dbPath, 'utf8', (err, data) => {
+        if (err) {
+            console.error(err);
+            return res.status(500).json({ error: 'Failed to read notes' });
+        }
+        res.json(JSON.parse(data));
+    });
+});
