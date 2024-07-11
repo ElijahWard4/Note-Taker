@@ -1,4 +1,6 @@
-Note Taker Application
+# Note Taker Application
+https://note-taker-v63m.onrender.com 
+
 ![Note-Taker-Gif](https://github.com/ElijahWard4/Note-Taker/assets/97565223/30d6fcc0-02af-4165-8535-d63c482a61a5)
 
 
@@ -17,22 +19,21 @@ This Note Taker application allows users to write, save, and delete notes. The a
 
 ## File Structure
 ```
-note-taker/
-├── Develop/
-│   ├── db/
-│   │   └── db.json
-│   ├── node_modules/
-│   ├── public/
-│   │   ├── assets/
-│   │   │   ├── css/
-│   │   │   └── js/
-│   │   │       └── index.js
-│   │   ├── index.html
-│   │   └── notes.html
-│   ├── .gitignore
-│   ├── package-lock.json
-│   ├── package.json
-│   └── server.js
+Note-Taker/
+│
+├── db/
+│
+├── public/
+│   ├── assets/
+│   ├── index.html
+│   ├── notes.html
+│
+├── .gitignore
+├── LICENSE
+├── package-lock.json
+├── package.json
+├── README.md
+└── server.js
 ```
 
 ## Installation
